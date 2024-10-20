@@ -1,19 +1,18 @@
 # Rule Engine with AST
 
 ## Overview
-This project implements a simple 3-tier rule engine application with a user interface, API, and backend. It determines user eligibility based on attributes like age, department, income, and spend. The system uses an Abstract Syntax Tree (AST) to represent conditional rules and allows for dynamic creation, combination, and modification of these rules.
+This project implements a simple 3-tier rule engine application with a user interface, API, and backend. It determines user eligibility based on attributes like age, department, income, and spend. The system uses an Abstract Syntax Tree (AST) to represent conditional rules and allows for dynamic creation and evaluation of these rules.
 
 ## Features
-- Create and add new users
-- Define and evaluate eligibility rules
 - Check user eligibility based on defined rules
 - Responsive web interface
 - Error handling for invalid rule strings and data formats
+- Simple and intuitive UI with a focus on eligibility checking
 
 ## Technology Stack
 - Frontend: HTML, CSS, JavaScript
-- Backend: [Your backend technology, e.g., Python with Flask]
-- Database: [Your database choice, e.g., SQLite, PostgreSQL]
+- Backend: Python with Flask
+- Database: SQLite
 
 ## Setup and Installation
 1. Clone the repository:
@@ -22,23 +21,32 @@ This project implements a simple 3-tier rule engine application with a user inte
    cd rule-engine-ast
    ```
 
-2. [Include steps to set up the backend environment, e.g., installing Python dependencies]
-
-3. [Include steps to set up the database]
-
-4. Start the backend server:
+2. Set up a virtual environment and activate it:
    ```
-   [Command to start your backend server]
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
-5. Open `index.html` in a web browser to access the application.
+3. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+4. Initialize the database:
+   ```
+   flask db init
+   flask db migrate
+   flask db upgrade
+   ```
+
+5. Start the backend server:
+   ```
+   flask run
+   ```
+
+6. Open `index.html` in a web browser to access the application.
 
 ## Usage
-### Adding a New User
-1. Click on the "Add New User" button.
-2. Fill in the user details (Name, Age, Department, Income, Spend).
-3. Click "Add User" to save the new user.
-
 ### Checking Eligibility
 1. Enter a rule string in the format: `(condition) AND/OR (condition)`.
    Example: `(age > 30 AND department = 'Sales') OR (income > 50000)`
@@ -47,18 +55,28 @@ This project implements a simple 3-tier rule engine application with a user inte
 
 ## Project Structure
 - `index.html`: Main HTML file for the user interface
-- `[backend_file]`: Backend implementation for rule processing and user management
-- `[database_file]`: Database for storing user information and rules
+- `app.py`: Backend implementation for rule processing and API endpoints
+- `models.py`: Database models
+- `requirements.txt`: List of Python dependencies
 
 ## API Endpoints
-- `/add_user`: POST request to add a new user
 - `/check_eligibility`: POST request to evaluate a rule against user data
 
 ## Future Enhancements
-- Implement rule combination functionality
+- Implement user management functionality (add, edit, delete users)
 - Add support for more complex rule structures
 - Enhance the user interface for rule creation
-- Implement user authentication and authorization
+- Implement rule combination functionality
+- Add unit tests for backend logic
+
+## Dependencies
+The project relies on the following main dependencies:
+- Flask
+- Flask-SQLAlchemy
+- SQLAlchemy
+- python-dotenv
+
+For a complete list of dependencies, refer to the `requirements.txt` file.
 
 ## Contributing
 Contributions to improve the Rule Engine are welcome. Please follow these steps:
@@ -69,9 +87,9 @@ Contributions to improve the Rule Engine are welcome. Please follow these steps:
 5. Create a new Pull Request
 
 ## License
-[Your chosen license, e.g., MIT License]
+MIT License
 
 ## Contact
-[Your Name] - [Your Email]
+Your Name - your.email@example.com
 
 Project Link: https://github.com/your-username/rule-engine-ast
