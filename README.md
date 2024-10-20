@@ -17,8 +17,8 @@ This project implements a simple 3-tier rule engine application with a user inte
 ## Setup and Installation
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/rule-engine-ast.git
-   cd rule-engine-ast
+   git clone https://github.com/balakrishnasurya/ZeoTap-A1.git
+   cd ZeoTap-A1
    ```
 
 2. Set up a virtual environment and activate it:
@@ -29,7 +29,7 @@ This project implements a simple 3-tier rule engine application with a user inte
 
 3. Install the required dependencies:
    ```
-   pip install -r requirements.txt
+   pip install -r reqirements.txt
    ```
 
 4. Initialize the database:
@@ -54,10 +54,14 @@ This project implements a simple 3-tier rule engine application with a user inte
 3. Click "Check Eligibility" to evaluate the rule.
 
 ## Project Structure
-- `index.html`: Main HTML file for the user interface
+- `templates/index.html`: Main HTML file for the user interface
 - `app.py`: Backend implementation for rule processing and API endpoints
 - `models.py`: Database models
-- `requirements.txt`: List of Python dependencies
+- `reqirements.txt`: List of Python dependencies
+- `rule_ast.py`: Implementation of the Abstract Syntax Tree for rules
+- `rules.py`: Rule processing logic
+- `database.py`: Database configuration
+- `user.sql`: SQL file for user data
 
 ## API Endpoints
 - `/check_eligibility`: POST request to evaluate a rule against user data
@@ -76,7 +80,7 @@ The project relies on the following main dependencies:
 - SQLAlchemy
 - python-dotenv
 
-For a complete list of dependencies, refer to the `requirements.txt` file.
+For a complete list of dependencies, refer to the `reqirements.txt` file.
 
 ## Contributing
 Contributions to improve the Rule Engine are welcome. Please follow these steps:
@@ -87,9 +91,8 @@ Contributions to improve the Rule Engine are welcome. Please follow these steps:
 5. Create a new Pull Request
 
 ## License
-MIT License
 
 ## Contact
-Your Name - your.email@example.com
+Balakrishna Surya - surya720027@gmail.com
 
-Project Link: https://github.com/your-username/rule-engine-ast
+Project Link: https://github.com/balakrishnasurya/ZeoTap-A1
